@@ -1,0 +1,52 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = 'Freelance Softwareentwickler – Portfolio',
+  description = 'Persönliche Seite von Waldemar Artes, freiberuflicher Softwareentwickler aus Deutschland.',
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class="h-full scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+  </head>
+  <body class="min-h-full bg-[#0e1102] text-[#faf9f6] antialiased">
+    <div class="mx-auto flex min-h-screen max-w-5xl flex-col px-4 py-8 sm:px-6 lg:px-8">
+      <header class="mb-10 flex items-center justify-between gap-4">
+        <a href="/" class="text-lg font-semibold tracking-tight">
+          <span class="text-amber-400">/&gt;</span> Waldemar Artes
+        </a>
+        <nav class="flex gap-4 text-sm text-amber-50/80">
+          <a href="/timeline" class="hover:text-amber-300">Projektverlauf</a>
+          <a href="/employers" class="hover:text-amber-300">Referenzen</a>
+          <a href="/about" class="hover:text-amber-300">Über mich & Skills</a>
+        </nav>
+      </header>
+
+      <main class="flex-1">
+        <slot />
+      </main>
+
+      <footer class="mt-10 border-t border-slate-800 pt-6 text-xs text-amber-100/60">
+        <div class="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+          <p>© {new Date().getFullYear()} Waldemar Artes – Freiberuflicher Softwareentwickler in Deutschland.</p>
+          <nav class="flex gap-4 text-xs">
+            <a href="/impressum" class="hover:text-amber-300">Impressum</a>
+            <a href="/datenschutz" class="hover:text-amber-300">Datenschutz</a>
+          </nav>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
+

@@ -1,0 +1,32 @@
+{
+  "name": "myprofile",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "lint": "echo \"No linter configured\"",
+    "check": "astro check"
+  },
+  "keywords": [
+    "astro",
+    "portfolio",
+    "freelance",
+    "developer"
+  ],
+  "author": "",
+  "license": "ISC",
+  "description": "Personal freelance developer profile site built with Astro, TypeScript, Tailwind CSS, and MDX.",
+  "dependencies": {
+    "@astrojs/mdx": "^4.3.13",
+    "astro": "^5.16.7",
+    "autoprefixer": "^10.4.23",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.18",
+    "typescript": "^5.9.3"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.18"
+  }
+}

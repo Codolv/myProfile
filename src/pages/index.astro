@@ -1,0 +1,86 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const title = 'Freiberuflicher Java-Backend-Entwickler in Deutschland – Waldemar Artes';
+const description =
+  'Ich baue skalierbare Backend-Services mit Java, Spring Boot und soliden Architekturmustern. Schau dir meinen Projektverlauf, Referenzen und meine Skills an.';
+---
+
+<BaseLayout {title} {description}>
+  <section class="grid gap-10 md:grid-cols-[minmax(0,2fr)_minmax(0,1.3fr)] md:items-center">
+    <div class="space-y-6">
+      <p class="inline-flex items-center rounded-full border border-amber-500/40 bg-amber-500/10 px-3 py-1 text-xs font-medium text-amber-200">
+        Verfügbar für Java/Spring-Backend-Projekte in Deutschland & remote in der EU
+      </p>
+      <div>
+        <h1 class="text-balance text-3xl font-semibold tracking-tight text-[#faf9f6] sm:text-4xl md:text-5xl">
+          Ich entwickle robuste Backend-Services mit <span class="text-amber-400">Java & Spring Boot</span>.
+        </h1>
+        <p class="mt-4 max-w-xl text-sm leading-relaxed text-amber-50/90 sm:text-base">
+          Als freiberuflicher Backend-Entwickler aus Deutschland helfe ich Teams, stabile Services aufzubauen – mit
+          sauberer Architektur (DDD/Hexagonal), API-Design, Monitoring und verlässlicher CI/CD. Ich arbeite regelmäßig
+          mit verteilten Teams und Unternehmen aus Deutschland und der EU.
+        </p>
+      </div>
+
+      <div class="flex flex-wrap gap-3 text-sm">
+        <a
+          href="/timeline"
+          class="rounded-full bg-amber-500 px-4 py-2 font-medium text-[#0a0a0a] shadow-sm shadow-amber-500/40 transition hover:bg-amber-400"
+        >
+          Projektverlauf ansehen
+        </a>
+        <a
+          href="/about"
+          class="rounded-full border border-amber-500/60 px-4 py-2 font-medium text-amber-100 shadow-sm shadow-amber-500/30 transition hover:bg-amber-500 hover:text-[#0a0a0a]"
+        >
+          Über mich & Skills
+        </a>
+      </div>
+
+      <dl class="grid gap-4 text-xs text-amber-50/90 sm:grid-cols-3 sm:text-sm">
+        <div>
+          <dt class="font-medium text-amber-50">Standort</dt>
+          <dd>Deutschland · Remote-freundlich</dd>
+        </div>
+        <div>
+          <dt class="font-medium text-amber-50">Fokus</dt>
+          <dd>Java, Spring Boot, REST/GraphQL, CI/CD</dd>
+        </div>
+        <div>
+          <dt class="font-medium text-amber-50">Zusammenarbeit</dt>
+          <dd>Agile Teams, langfristige Projekte</dd>
+        </div>
+      </dl>
+    </div>
+
+    <aside class="space-y-5 rounded-2xl border border-slate-800/50 bg-[#0e1102]/50 p-5 shadow-xl shadow-black/60">
+      <div class="relative aspect-square overflow-hidden rounded-2xl border border-slate-800/50 bg-gradient-to-br from-slate-900/50 via-slate-950/50 to-black shadow-inner shadow-black/50">
+        
+        <img
+          src="/profile.jpg"
+          alt="Portrait von Waldemar Artes"
+          loading="lazy"
+          class="h-full w-full object-cover transition-opacity duration-300"
+          onerror="this.style.opacity=0"
+        />
+      </div>
+      <h2 class="text-sm font-semibold tracking-tight text-slate-100">Kurzprofil</h2>
+      <ul class="space-y-2 text-xs text-amber-50/90 sm:text-sm">
+        <li>· Freiberuflich seit 2025 (Deutschland)</li>
+        <li>· Spezialisiert auf Java/Spring-Backends, APIs und Integrationen</li>
+        <li>· Erfahrung mit SaaS, B2B-Integrationen und internen Plattformen</li>
+        <li>· Sicher in deutsch- und englischsprachigen Teams</li>
+        <li>· Starker Fokus auf Observability, Tests & Developer Experience</li>
+      </ul>
+      <div class="mt-4 space-y-2 text-xs text-amber-100/70">
+        <p class="font-medium text-amber-50">Nächster Schritt</p>
+        <p>
+          Schau dir meinen Projektverlauf und meine Referenzen an und melde dich dann mit einer kurzen Beschreibung
+          deines Vorhabens und deiner bevorzugten Zusammenarbeit.
+        </p>
+      </div>
+    </aside>
+  </section>
+</BaseLayout>
+
