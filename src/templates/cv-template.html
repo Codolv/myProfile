@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Lebenslauf - {{name}}</title>
+    <style>
+      :root { --accent: {{accentColor}}; --muted:#6b7280; --page-bg: #fff }
+      @page { size: A4; margin: 18mm }
+      body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; color:#111; background:var(--page-bg); }
+      .container { display: flex; gap: 22px; }
+      .left { width: 260px; }
+      .right { flex:1; }
+      header { display:flex; gap:20px; align-items:center; }
+      .avatar { width:110px; height:110px; border-radius:8px; object-fit:cover; box-shadow:0 6px 18px rgba(15,118,110,0.08); border:3px solid rgba(15,118,110,0.06) }
+      h1 { margin:0; font-size:22px; color:var(--accent) }
+      h2 { margin:12px 0 8px; font-size:13px; color:#374151; letter-spacing:0.2px }
+      .muted { color:var(--muted); font-size:12px; line-height:1.4 }
+      .section { margin-bottom:14px }
+      .skill-list, .method-list { list-style:none; padding:0; margin:0; }
+      .skill-item { margin-bottom:6px; font-size:11px }
+      .skill-name { font-size:11px; color:#111; margin-bottom:3px }
+      .bar { background:#eef6f5; border-radius:6px; height:6px; overflow:hidden }
+      .bar-fill { background:var(--accent); height:100%; border-radius:6px }
+      .experience-item { margin-bottom:12px }
+      .company { font-weight:700; color:#111 }
+      .period { float:right; font-size:11px; color:var(--muted) }
+      .hr { height:1px; background:#eef2f2; margin:14px 0 }
+      .contact { font-size:12px }
+      .badge { display:inline-block; background:#f3f7f6; color:#065f58; padding:4px 10px; border-radius:999px; font-size:11px; margin:3px 6px 4px 0 }
+      footer { position:fixed; bottom:10mm; left:18mm; right:18mm; text-align:center; font-size:11px; color:#9ca3af }
+      .small { font-size:11px; color:var(--muted) }
+      .skill-group { margin-bottom:8px }
+      .left .section h2 { margin-top:6px }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div>
+        <h1>{{name}}</h1>
+        <div class="muted small">{{title}} • {{location}}</div>
+      </div>
+    </header>
+    <div class="hr"></div>
+
+    <div class="container">
+      <aside class="left">
+        <img src="{{profileImage}}" class="avatar" alt="Profilbild" />
+
+        <div class="section">
+          <h2>Kontakt</h2>
+          <div class="contact"><strong>{{email}}</strong></div>
+          <div class="muted small">{{availability}}</div>
+        </div>
+
+        <div class="section">
+          <h2>Fähigkeiten</h2>
+
+          <div class="skill-group">
+            <div class="small" style="margin-bottom:6px"><strong>Sprachen</strong></div>
+            <ul class="skill-list">
+              {{#languages}}
+              <li class="skill-item">
+                <div class="skill-name">{{name}}</div>
+                <div class="bar"><div class="bar-fill" style="width:{{levelPercent}}"></div></div>
+              </li>
+              {{/languages}}
+            </ul>
+          </div>
+
+          <div class="skill-group">
+            <div class="small" style="margin-bottom:6px"><strong>Frameworks</strong></div>
+            <ul class="skill-list">
+              {{#frameworks}}
+              <li class="skill-item">
+                <div class="skill-name">{{name}}</div>
+                <div class="bar"><div class="bar-fill" style="width:{{levelPercent}}"></div></div>
+              </li>
+              {{/frameworks}}
+            </ul>
+          </div>
+
+          <div class="skill-group">
+            <div class="small" style="margin-bottom:6px"><strong>Tools</strong></div>
+            <ul class="skill-list">
+              {{#tools}}
+              <li class="skill-item">
+                <div class="skill-name">{{name}}</div>
+                <div class="bar"><div class="bar-fill" style="width:{{levelPercent}}"></div></div>
+              </li>
+              {{/tools}}
+            </ul>
+          </div>
+        </div>
+
+        <div class="section">
+          <h2>Methoden</h2>
+          <ul class="method-list">
+            {{#methods}}
+            <li class="skill-item">{{.}}</li>
+            {{/methods}}
+          </ul>
+        </div>
+      </aside>
+
+      <main class="right">
+        <div class="section">
+          <h2>Profil</h2>
+          <div class="muted">{{description}}</div>
+        </div>
+
+        <div class="section">
+          <h2>Berufserfahrung</h2>
+          {{#experience}}
+          <div class="experience-item">
+            <div><span class="company">{{company}} — {{position}}</span><span class="period">{{period}}</span></div>
+            <div class="muted">{{description}}</div>
+            <div style="font-size:12px;margin-top:6px">{{technologies}}</div>
+          </div>
+          {{/experience}}
+        </div>
+
+        <div class="section">
+          <h2>Zertifikate</h2>
+          <ul style="padding-left:16px" class="muted">
+            {{#certifications}}
+            <li>{{date}} — {{title}}</li>
+            {{/certifications}}
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2>Arbeitsweise</h2>
+          <ul style="padding-left:16px" class="muted">
+            {{#workPhilosophy}}
+            <li>{{.}}</li>
+            {{/workPhilosophy}}
+          </ul>
+        </div>
+      </main>
+    </div>
+
+  </body>
+</html>

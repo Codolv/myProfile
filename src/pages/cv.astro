@@ -1,19 +1,20 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { personalData } from '../data/personalData.js';
 
-const title = 'CV – Waldemar Artes';
+const title = `CV – ${personalData.personalInfo.name}`;
 const description =
-  'Lebenslauf von Waldemar Artes – Senior Java-Backend-Entwickler und Software-Architekt. Export als PDF über Druckfunktion.';
+  `Lebenslauf von ${personalData.personalInfo.name} – ${personalData.personalInfo.title}. Export als PDF über Druckfunktion.`;
 ---
 
 <BaseLayout {title} {description}>
   <section class="space-y-6 rounded-2xl border border-slate-800 bg-[#0e1102]/60 p-6 shadow-lg shadow-slate-950/50">
     <div class="flex flex-col gap-4 border-b border-slate-800 pb-4 md:flex-row md:items-center md:justify-between">
       <div>
-        <h1 class="text-2xl font-semibold tracking-tight text-[#faf9f6]">Waldemar Artes</h1>
-        <p class="text-sm text-amber-50/90">Senior Java-Backend-Entwickler & Software-Architekt</p>
-        <p class="text-xs text-amber-100/70">Nürnberg · Deutschland · Remote-freundlich</p>
-        <p class="text-xs text-amber-100/70">E-Mail: info@artesw.de</p>
+        <h1 class="text-2xl font-semibold tracking-tight text-[#faf9f6]">{personalData.personalInfo.name}</h1>
+        <p class="text-sm text-amber-50/90">{personalData.personalInfo.title}</p>
+        <p class="text-xs text-amber-100/70">{personalData.personalInfo.location}</p>
+        <p class="text-xs text-amber-100/70">E-Mail: {personalData.personalInfo.email}</p>
       </div>
       <div class="flex gap-2">
         <button
@@ -22,6 +23,15 @@ const description =
         >
           Als PDF exportieren
         </button>
+        <a
+          href="/cv.pdf"
+          class="rounded-full border border-amber-500/60 px-4 py-2 text-xs font-medium text-amber-100 transition hover:bg-amber-500 hover:text-[#0a0a0a]"
+          target="_blank"
+          rel="noreferrer"
+          download
+        >
+          CV herunterladen
+        </a>
         <a
           href="/profile.jpg"
           class="rounded-full border border-slate-700 px-4 py-2 text-xs font-medium text-[#faf9f6] transition hover:border-amber-500/60 hover:text-amber-100"
@@ -38,95 +48,22 @@ const description =
         <section class="space-y-3">
           <h2 class="text-sm font-semibold tracking-tight text-[#faf9f6]">Berufserfahrung</h2>
 
-          <article class="rounded-xl border border-slate-800 bg-[#0e1102]/60 p-4">
-            <header class="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
-              <h3 class="text-sm font-semibold text-[#faf9f6]">Bildungsportal IT.NRW</h3>
-              <p class="text-xs text-amber-100/70">05/2025 – jetzt · Senior-Entwickler</p>
-            </header>
-            <p class="mt-2 text-xs leading-relaxed text-amber-50/90">
-              Betreuung der Anwendungen des Bildungsportals. Migration auf Tomcat&nbsp;10 &amp; Java&nbsp;17, Behebung von
-              Pentest-Schwachstellen, allgemeine Fehlerkorrekturen.
-            </p>
-            <p class="mt-2 text-[11px] text-amber-100/70">
-              Technologien: Java&nbsp;17, Spring, Spring Boot, Tomcat 7/10, Maven, GitLab, Weld, JSP, JSF, Primefaces,
-              Omnifaces.
-            </p>
-          </article>
-
-          <article class="rounded-xl border border-slate-800 bg-[#0e1102]/60 p-4">
-            <header class="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
-              <h3 class="text-sm font-semibold text-[#faf9f6]">Xausländer Microservices (BA)</h3>
-              <p class="text-xs text-amber-100/70">09/2022 – 04/2025 · Senior-Entwickler & Architektur</p>
-            </header>
-            <p class="mt-2 text-xs leading-relaxed text-amber-50/90">
-              Umbau des Monolithen nach Microservices mit Quarkus &amp; Reactive (Mutiny). Schnittstellendesign via REST &amp;
-              Kafka, Implementierung und Betrieb auf Docker/Kubernetes/Rancher.
-            </p>
-            <p class="mt-2 text-[11px] text-amber-100/70">
-              Technologien: Java&nbsp;17, Quarkus, Mutiny, Kafka, Docker, Kubernetes, Rancher, AKHQ, GitHub Actions, Helm,
-              Grafana, REST, XÖV, OSCI, Spring Boot, JUnit, Mockito.
-            </p>
-          </article>
-
-          <article class="rounded-xl border border-slate-800 bg-[#0e1102]/60 p-4">
-            <header class="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
-              <h3 class="text-sm font-semibold text-[#faf9f6]">XAusländer (BA)</h3>
-              <p class="text-xs text-amber-100/70">11/2018 – 09/2022 · Senior-Entwickler & Architektur</p>
-            </header>
-            <p class="mt-2 text-xs leading-relaxed text-amber-50/90">
-              Digitalisierung des Datenaustauschs zwischen gE und BAMF für Integrationskursverpflichtungen. Architektur,
-              Java/J(2)EE Client-Server, EJB&nbsp;3.1, EclipseLink, Oracle Weblogic; Frontend mit Angular.
-            </p>
-            <p class="mt-2 text-[11px] text-amber-100/70">
-              Technologien: Java/J(2)EE, EJB 3.1, JPA, EclipseLink, Oracle Weblogic, Angular, TypeScript, REST, XÖV, OSCI,
-              XML/XSLT/XPath, JSON, JUnit, Mockito, Oracle DB, Docker, Jenkins, Git, Bitbucket.
-            </p>
-          </article>
-
-          <article class="rounded-xl border border-slate-800 bg-[#0e1102]/60 p-4">
-            <header class="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
-              <h3 class="text-sm font-semibold text-[#faf9f6]">DARV (BA)</h3>
-              <p class="text-xs text-amber-100/70">05/2018 – 11/2018 · Senior-Entwickler</p>
-            </header>
-            <p class="mt-2 text-xs leading-relaxed text-amber-50/90">
-              Meldung von Kundendaten an die ZfA inkl. Batch-Prozesse, Validierung, Bescheiderstellung und Web-GUI.
-            </p>
-            <p class="mt-2 text-[11px] text-amber-100/70">
-              Technologien: Java/J(2)EE, JSF, Oracle ADF, BADF, EJB3, EclipseLink, JPA, Oracle Weblogic, SOAP, JUnit,
-              Log4J, Maven, Git, Jenkins, Liquibase, SonarQube.
-            </p>
-          </article>
-
-          <article class="rounded-xl border border-slate-800 bg-[#0e1102]/60 p-4">
-            <header class="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
-              <h3 class="text-sm font-semibold text-[#faf9f6]">BEA (BA)</h3>
-              <p class="text-xs text-amber-100/70">02/2013 – 05/2018 · Junior-Entwickler</p>
-            </header>
-            <p class="mt-2 text-xs leading-relaxed text-amber-50/90">
-              Java EE Anwendung für Annahme von Arbeits- und Nebeneinkommensbescheinigungen, Batch-Pipelines,
-              Plausibilitätsprüfungen, eAkte-Übergabe.
-            </p>
-            <p class="mt-2 text-[11px] text-amber-100/70">
-              Technologien: Java/JEE, EclipseLink, JUnit, Log4J, BADF, Oracle Weblogic, ESB, Maven, Ant, SVN, Jenkins,
-              Oracle DB, hsql, Derby.
-            </p>
-          </article>
-
-          <article class="rounded-xl border border-slate-800 bg-[#0e1102]/60 p-4">
-            <header class="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
-              <h3 class="text-sm font-semibold text-[#faf9f6]">TextGrid (FH Worms)</h3>
-              <p class="text-xs text-amber-100/70">2010 – 2012 · Junior-Entwickler</p>
-            </header>
-            <p class="mt-2 text-xs leading-relaxed text-amber-50/90">Java Backend &amp; Frontend auf Eclipse-Plattform.</p>
-          </article>
-
-          <article class="rounded-xl border border-slate-800 bg-[#0e1102]/60 p-4">
-            <header class="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
-              <h3 className="text-sm font-semibold text-[#faf9f6]">SciPort (FH Worms)</h3>
-              <p className="text-xs text-amber-100/70">2009 – 2010 · Junior-Entwickler</p>
-            </header>
-            <p class="mt-2 text-xs leading-relaxed text-amber-50/90">Frontend-Entwicklung mit Ruby on Rails.</p>
-          </article>
+          {personalData.experience.map((job) => (
+            <article class="rounded-xl border border-slate-800 bg-[#0e1102]/60 p-4">
+              <header class="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
+                <h3 class="text-sm font-semibold text-[#faf9f6]">{job.company}</h3>
+                <p class="text-xs text-amber-100/70">{job.period} · {job.position}</p>
+              </header>
+              <p class="mt-2 text-xs leading-relaxed text-amber-50/90">
+                {job.description}
+              </p>
+              {job.technologies.length > 0 && (
+                <p class="mt-2 text-[11px] text-amber-100/70">
+                  Technologien: {job.technologies.join(', ')}.
+                </p>
+              )}
+            </article>
+          ))}
         </section>
       </div>
 
@@ -145,12 +82,9 @@ const description =
         <section class="rounded-xl border border-slate-800 bg-[#0e1102]/60 p-4">
           <h2 class="text-sm font-semibold tracking-tight text-[#faf9f6]">Zertifizierungen</h2>
           <ul class="mt-3 space-y-2 text-xs text-amber-50/90">
-            <li>03/2022 – ISAQB Advanced: Evolution and Improvement of Software Architectures</li>
-            <li>11/2021 – ISAQB Advanced: Soft Skills for Software Architects</li>
-            <li>06/2020 – ISAQB Advanced: Domain Driven Design</li>
-            <li>01/2020 – ISAQB Advanced: Infrastructure, Container and Cloud Native</li>
-            <li>03/2016 – ISAQB Advanced: Architecture Documentation</li>
-            <li>12/2012 – ISAQB Foundation: Certified Professional for Software Architecture</li>
+            {personalData.certifications.map((cert) => (
+              <li>{cert.date} – {cert.title}</li>
+            ))}
           </ul>
         </section>
 
@@ -166,8 +100,12 @@ const description =
         <section class="rounded-xl border border-slate-800 bg-[#0e1102]/60 p-4">
           <h2 class="text-sm font-semibold tracking-tight text-[#faf9f6]">Ausbildung</h2>
           <ul class="mt-3 space-y-2 text-xs text-amber-50/90">
-            <li>2008 – 2012: Informatikstudium FH Worms (B.Sc.)</li>
-            <li>2005 – 2007: Staatl. geprüfter technischer Assistent für Informatik &amp; Automatisierungstechnik (mit Fachhochschulreife)</li>
+            {personalData.education.map((edu) => (
+              <li>
+                {edu.period}: {edu.degree} {edu.institution}
+                {edu.details && ` (${edu.details})`}
+              </li>
+            ))}
           </ul>
         </section>
       </div>

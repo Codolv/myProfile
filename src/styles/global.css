@@ -4,6 +4,7 @@
   --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
 }
 
+/* Base styles */
 html,
 body {
   margin: 0;
@@ -11,5 +12,16 @@ body {
   font-family: var(--font-sans);
   background-color: #0e1102;
   color: #faf9f6;
+}
+
+/* Scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Antialiasing */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 

@@ -4,12 +4,11 @@ title: 'Über mich & Skills – Waldemar Artes'
 description: 'Hintergrund, Skills und Zertifizierungen als Senior Java-Backend-Entwickler und Software-Architekt.'
 ---
 
+import { personalData } from '../data/personalData.js';
+
 # Über mich
 
-Ich bin Senior Java-Backend-Entwickler und Software-Architekt mit über 15 Jahren Erfahrung in der Entwicklung von
-Enterprise-Anwendungen. Meine Schwerpunkte liegen in der Java-EE- und Spring-Ökosystem-Entwicklung, der Migration von
-Monolithen zu Microservices sowie der Softwarearchitektur. Ich arbeite gerne in agilen Teams und bringe langjährige
-Erfahrung in der Zusammenarbeit mit deutschen Behörden und Unternehmen mit.
+{personalData.personalInfo.description}
 
 <div className="mt-8 space-y-6">
   <section className="rounded-xl border border-slate-800 bg-[#0e1102]/60 p-5">
@@ -18,116 +17,34 @@ Erfahrung in der Zusammenarbeit mit deutschen Behörden und Unternehmen mit.
       <div className="space-y-1">
         <h3 className="text-xs font-semibold uppercase tracking-wide text-amber-100/70">Sprachen & Laufzeiten</h3>
         <ul className="mt-1 space-y-1 text-xs text-amber-50/90 sm:text-sm">
-          <li className="flex justify-between">
-            <span>Java / Java-EE</span>
-            <span className="font-mono text-amber-50">5/5</span>
-          </li>
-          <li className="flex justify-between">
-            <span>Java 17</span>
-            <span className="font-mono text-amber-50">5/5</span>
-          </li>
-          <li className="flex justify-between">
-            <span>TypeScript / JavaScript</span>
-            <span className="font-mono text-amber-50">4/5</span>
-          </li>
-          <li className="flex justify-between">
-            <span>XML, XSLT, XPath</span>
-            <span className="font-mono text-amber-50">4/5</span>
-          </li>
-          <li className="flex justify-between">
-            <span>JSON</span>
-            <span className="font-mono text-amber-50">5/5</span>
-          </li>
-          <li className="flex justify-between">
-            <span>Bash</span>
-            <span className="font-mono text-amber-50">3/5</span>
-          </li>
+          {personalData.skills.languages.map((skill) => (
+            <li className="flex justify-between">
+              <span>{skill.name}</span>
+              <span className="font-mono text-amber-50">{skill.level}/5</span>
+            </li>
+          ))}
         </ul>
       </div>
       <div className="space-y-1">
         <h3 className="text-xs font-semibold uppercase tracking-wide text-amber-100/70">Frameworks & Libraries</h3>
         <ul className="mt-1 space-y-1 text-xs text-amber-50/90 sm:text-sm">
-          <li className="flex justify-between">
-            <span>Spring Boot</span>
-            <span className="font-mono text-amber-50">5/5</span>
-          </li>
-          <li className="flex justify-between">
-            <span>Spring Framework</span>
-            <span className="font-mono text-amber-50">5/5</span>
-          </li>
-          <li className="flex justify-between">
-            <span>Quarkus</span>
-            <span className="font-mono text-amber-50">4/5</span>
-          </li>
-          <li className="flex justify-between">
-            <span>EJB 3.1</span>
-            <span className="font-mono text-amber-50">5/5</span>
-          </li>
-          <li className="flex justify-between">
-            <span>JPA / EclipseLink</span>
-            <span className="font-mono text-amber-50">5/5</span>
-          </li>
-          <li className="flex justify-between">
-            <span>Mutiny (Reactive)</span>
-            <span className="font-mono text-amber-50">4/5</span>
-          </li>
-          <li className="flex justify-between">
-            <span>Angular</span>
-            <span className="font-mono text-amber-50">4/5</span>
-          </li>
-          <li className="flex justify-between">
-            <span>JSF / Primefaces</span>
-            <span className="font-mono text-amber-50">4/5</span>
-          </li>
-          <li className="flex justify-between">
-            <span>REST / SOAP</span>
-            <span className="font-mono text-amber-50">5/5</span>
-          </li>
-          <li className="flex justify-between">
-            <span>JUnit / Mockito</span>
-            <span className="font-mono text-amber-50">5/5</span>
-          </li>
+          {personalData.skills.frameworks.map((skill) => (
+            <li className="flex justify-between">
+              <span>{skill.name}</span>
+              <span className="font-mono text-amber-50">{skill.level}/5</span>
+            </li>
+          ))}
         </ul>
       </div>
       <div className="space-y-1">
         <h3 className="text-xs font-semibold uppercase tracking-wide text-amber-100/70">Tools & Infrastruktur</h3>
         <ul className="mt-1 space-y-1 text-xs text-amber-50/90 sm:text-sm">
-          <li className="flex justify-between">
-            <span>Maven</span>
-            <span className="font-mono text-amber-50">5/5</span>
-          </li>
-          <li className="flex justify-between">
-            <span>Git / GitLab / GitHub</span>
-            <span className="font-mono text-amber-50">5/5</span>
-          </li>
-          <li className="flex justify-between">
-            <span>Docker / Kubernetes</span>
-            <span className="font-mono text-amber-50">4/5</span>
-          </li>
-          <li className="flex justify-between">
-            <span>Kafka</span>
-            <span className="font-mono text-amber-50">4/5</span>
-          </li>
-          <li className="flex justify-between">
-            <span>Jenkins / GitHub Actions</span>
-            <span className="font-mono text-amber-50">4/5</span>
-          </li>
-          <li className="flex justify-between">
-            <span>Oracle Weblogic / Tomcat</span>
-            <span className="font-mono text-amber-50">5/5</span>
-          </li>
-          <li className="flex justify-between">
-            <span>Oracle Database</span>
-            <span className="font-mono text-amber-50">4/5</span>
-          </li>
-          <li className="flex justify-between">
-            <span>JIRA / Confluence</span>
-            <span className="font-mono text-amber-50">5/5</span>
-          </li>
-          <li className="flex justify-between">
-            <span>SonarQube</span>
-            <span className="font-mono text-amber-50">4/5</span>
-          </li>
+          {personalData.skills.tools.map((skill) => (
+            <li className="flex justify-between">
+              <span>{skill.name}</span>
+              <span className="font-mono text-amber-50">{skill.level}/5</span>
+            </li>
+          ))}
         </ul>
       </div>
     </div>
@@ -136,70 +53,43 @@ Erfahrung in der Zusammenarbeit mit deutschen Behörden und Unternehmen mit.
   <section className="rounded-xl border border-slate-800 bg-[#0e1102]/60 p-5">
     <h2 className="text-sm font-semibold tracking-tight text-[#faf9f6] sm:text-base">Methoden & Standards</h2>
     <ul className="mt-3 space-y-2 text-xs text-amber-50/90 sm:text-sm">
-      <li>OOA/OOD mit UML/UML 2</li>
-      <li>Agile Methoden (Scrum, Kanban)</li>
-      <li>Domain Driven Design (DDD)</li>
-      <li>Microservices-Architektur</li>
-      <li>Reactive Programming</li>
-      <li>Continuous Integration / Continuous Delivery</li>
-      <li>XÖV / OSCI-Standards</li>
+      {personalData.skills.methods.map((method) => (
+        <li>{method}</li>
+      ))}
     </ul>
   </section>
 
   <section className="rounded-xl border border-slate-800 bg-[#0e1102]/60 p-5">
     <h2 className="text-sm font-semibold tracking-tight text-[#faf9f6] sm:text-base">Zertifizierungen</h2>
     <div className="mt-3 space-y-3 text-xs text-amber-50/90 sm:text-sm">
-      <div>
-        <p className="font-medium text-amber-50">März 2022</p>
-        <p>ISAQB Advanced Level – Evolution and Improvement of Software Architectures</p>
-      </div>
-      <div>
-        <p className="font-medium text-amber-50">November 2021</p>
-        <p>ISAQB Advanced Level – Soft Skills for Software Architects</p>
-      </div>
-      <div>
-        <p className="font-medium text-amber-50">Juni 2020</p>
-        <p>ISAQB Advanced Level – Domain Driven Design</p>
-      </div>
-      <div>
-        <p className="font-medium text-amber-50">Januar 2020</p>
-        <p>ISAQB Advanced Level – Infrastructure, Container and Cloud Native</p>
-      </div>
-      <div>
-        <p className="font-medium text-amber-50">März 2016</p>
-        <p>ISAQB Advanced Level – Architecture Documentation</p>
-      </div>
-      <div>
-        <p className="font-medium text-amber-50">Dezember 2012</p>
-        <p>ISAQB Certified Professional for Software Architecture – Foundation Level</p>
-      </div>
+      {personalData.certifications.map((cert) => (
+        <div>
+          <p className="font-medium text-amber-50">{cert.date}</p>
+          <p>{cert.title}</p>
+        </div>
+      ))}
     </div>
   </section>
 
   <section className="rounded-xl border border-slate-800 bg-[#0e1102]/60 p-5">
     <h2 className="text-sm font-semibold tracking-tight text-[#faf9f6] sm:text-base">Ausbildung</h2>
     <div className="mt-3 space-y-3 text-xs text-amber-50/90 sm:text-sm">
-      <div>
-        <p className="font-medium text-amber-50">2008 – 2012</p>
-        <p>Informatikstudium an der Fachhochschule Worms</p>
-        <p className="text-amber-100/70">Abschluss: Bachelor of Science</p>
-      </div>
-      <div>
-        <p className="font-medium text-amber-50">2005 – 2007</p>
-        <p>Weiterbildung zum staatlich geprüften technischen Assistenten für Informatik und Automatisierungstechnik</p>
-        <p className="text-amber-100/70">Mit Fachhochschulreife</p>
-      </div>
+      {personalData.education.map((edu) => (
+        <div>
+          <p className="font-medium text-amber-50">{edu.period}</p>
+          <p>{edu.institution}</p>
+          {edu.details && <p className="text-amber-100/70">{edu.details}</p>}
+        </div>
+      ))}
     </div>
   </section>
 
   <section className="rounded-xl border border-slate-800 bg-[#0e1102]/60 p-5">
     <h2 className="text-sm font-semibold tracking-tight text-[#faf9f6] sm:text-base">Wie ich arbeite</h2>
     <ul className="mt-3 space-y-2 text-xs text-amber-50/90 sm:text-sm">
-      <li>Bevorzuge langfristige Zusammenarbeit statt einmaliger Kurzprojekte.</li>
-      <li>Erfahren in Remote- und verteilten Teams.</li>
-      <li>Gewohnt an die Zusammenarbeit mit deutschen Behörden und Unternehmen.</li>
-      <li>Starker Fokus auf Softwarearchitektur, Code-Qualität und Wartbarkeit.</li>
-      <li>Erfahrung in der Migration von Legacy-Systemen zu modernen Architekturen.</li>
+      {personalData.workPhilosophy.map((philosophy) => (
+        <li>{philosophy}</li>
+      ))}
     </ul>
   </section>
 </div>

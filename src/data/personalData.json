@@ -1,0 +1,132 @@
+{
+  "personalInfo": {
+    "name": "Waldemar Artes",
+    "title": "Senior Java-Backend-Entwickler & Software-Architekt",
+    "location": "Nürnberg · Deutschland · Remote-freundlich",
+    "email": "info@artesw.de",
+    "availability": "Verfügbar für Java/Spring-Backend-Projekte in Deutschland & remote in der EU",
+    "description": "Ich bin Senior Java-Backend-Entwickler und Software-Architekt mit über 15 Jahren Erfahrung in der Entwicklung von Enterprise-Anwendungen. Meine Schwerpunkte liegen in der Java-EE- und Spring-Ökosystem-Entwicklung, der Migration von Monolithen zu Microservices sowie der Softwarearchitektur. Ich arbeite gerne in agilen Teams und bringe langjährige Erfahrung in der Zusammenarbeit mit deutschen Behörden und Unternehmen mit."
+  },
+  "skills": {
+    "languages": [
+      { "name": "Java / Java-EE", "level": 5 },
+      { "name": "Java 17", "level": 5 },
+      { "name": "TypeScript / JavaScript", "level": 4 },
+      { "name": "XML, XSLT, XPath", "level": 4 },
+      { "name": "JSON", "level": 5 },
+      { "name": "Bash", "level": 3 }
+    ],
+    "frameworks": [
+      { "name": "Spring Boot", "level": 5 },
+      { "name": "Spring Framework", "level": 5 },
+      { "name": "Quarkus", "level": 4 },
+      { "name": "EJB 3.1", "level": 5 },
+      { "name": "JPA / EclipseLink", "level": 5 },
+      { "name": "Mutiny (Reactive)", "level": 4 },
+      { "name": "Angular", "level": 4 },
+      { "name": "JSF / Primefaces", "level": 4 },
+      { "name": "REST / SOAP", "level": 5 },
+      { "name": "JUnit / Mockito", "level": 5 }
+    ],
+    "tools": [
+      { "name": "Maven", "level": 5 },
+      { "name": "Git / GitLab / GitHub", "level": 5 },
+      { "name": "Docker / Kubernetes", "level": 4 },
+      { "name": "Kafka", "level": 4 },
+      { "name": "Jenkins / GitHub Actions", "level": 4 },
+      { "name": "Oracle Weblogic / Tomcat", "level": 5 },
+      { "name": "Oracle Database", "level": 4 },
+      { "name": "JIRA / Confluence", "level": 5 },
+      { "name": "SonarQube", "level": 4 }
+    ],
+    "methods": [
+      "OOA/OOD mit UML/UML 2",
+      "Agile Methoden (Scrum, Kanban)",
+      "Domain Driven Design (DDD)",
+      "Microservices-Architektur",
+      "Reactive Programming",
+      "Continuous Integration / Continuous Delivery",
+      "XÖV / OSCI-Standards"
+    ]
+  },
+  "experience": [
+    {
+      "company": "Bildungsportal IT.NRW",
+      "position": "Senior-Entwickler",
+      "period": "05/2025 – jetzt",
+      "description": "Betreuung der Anwendungen des Bildungsportals. Migration auf Tomcat 10 & Java 17, Behebung von Pentest-Schwachstellen, allgemeine Fehlerkorrekturen.",
+      "technologies": ["Java 17", "Spring", "Spring Boot", "Tomcat 7/10", "Maven", "GitLab", "Weld", "JSP", "JSF", "Primefaces", "Omnifaces"]
+    },
+    {
+      "company": "Xausländer Microservices (BA)",
+      "position": "Senior-Entwickler & Architektur",
+      "period": "09/2022 – 04/2025",
+      "description": "Umbau des Monolithen nach Microservices mit Quarkus & Reactive (Mutiny). Schnittstellendesign via REST & Kafka, Implementierung und Betrieb auf Docker/Kubernetes/Rancher.",
+      "technologies": ["Java 17", "Quarkus", "Mutiny", "Kafka", "Docker", "Kubernetes", "Rancher", "AKHQ", "GitHub Actions", "Helm", "Grafana", "REST", "XÖV", "OSCI", "Spring Boot", "JUnit", "Mockito"]
+    },
+    {
+      "company": "XAusländer (BA)",
+      "position": "Senior-Entwickler & Architektur",
+      "period": "11/2018 – 09/2022",
+      "description": "Digitalisierung des Datenaustauschs zwischen gE und BAMF für Integrationskursverpflichtungen. Architektur, Java/J(2)EE Client-Server, EJB 3.1, EclipseLink, Oracle Weblogic; Frontend mit Angular.",
+      "technologies": ["Java/J(2)EE", "EJB 3.1", "JPA", "EclipseLink", "Oracle Weblogic", "Angular", "TypeScript", "REST", "XÖV", "OSCI", "XML/XSLT/XPath", "JSON", "JUnit", "Mockito", "Oracle DB", "Docker", "Jenkins", "Git", "Bitbucket"]
+    },
+    {
+      "company": "DARV (BA)",
+      "position": "Senior-Entwickler",
+      "period": "05/2018 – 11/2018",
+      "description": "Meldung von Kundendaten an die ZfA inkl. Batch-Prozesse, Validierung, Bescheiderstellung und Web-GUI.",
+      "technologies": ["Java/J(2)EE", "JSF", "Oracle ADF", "BADF", "EJB3", "EclipseLink", "JPA", "Oracle Weblogic", "SOAP", "JUnit", "Log4J", "Maven", "Git", "Jenkins", "Liquibase", "SonarQube"]
+    },
+    {
+      "company": "BEA (BA)",
+      "position": "Junior-Entwickler",
+      "period": "02/2013 – 05/2018",
+      "description": "Java EE Anwendung für Annahme von Arbeits- und Nebeneinkommensbescheinigungen, Batch-Pipelines, Plausibilitätsprüfungen, eAkte-Übergabe.",
+      "technologies": ["Java/JEE", "EclipseLink", "JUnit", "Log4J", "BADF", "Oracle Weblogic", "ESB", "Maven", "Ant", "SVN", "Jenkins", "Oracle DB", "hsql", "Derby"]
+    },
+    {
+      "company": "TextGrid (FH Worms)",
+      "position": "Junior-Entwickler",
+      "period": "2010 – 2012",
+      "description": "Java Backend & Frontend auf Eclipse-Plattform.",
+      "technologies": []
+    },
+    {
+      "company": "SciPort (FH Worms)",
+      "position": "Junior-Entwickler",
+      "period": "2009 – 2010",
+      "description": "Frontend-Entwicklung mit Ruby on Rails.",
+      "technologies": []
+    }
+  ],
+  "education": [
+    {
+      "period": "2008 – 2012",
+      "institution": "Fachhochschule Worms",
+      "degree": "Informatikstudium",
+      "details": "Abschluss: Bachelor of Science"
+    },
+    {
+      "period": "2005 – 2007",
+      "institution": "Weiterbildung",
+      "degree": "Staatlich geprüfter technischer Assistent für Informatik und Automatisierungstechnik",
+      "details": "Mit Fachhochschulreife"
+    }
+  ],
+  "certifications": [
+    { "date": "März 2022", "title": "ISAQB Advanced Level – Evolution and Improvement of Software Architectures" },
+    { "date": "November 2021", "title": "ISAQB Advanced Level – Soft Skills for Software Architects" },
+    { "date": "Juni 2020", "title": "ISAQB Advanced Level – Domain Driven Design" },
+    { "date": "Januar 2020", "title": "ISAQB Advanced Level – Infrastructure, Container and Cloud Native" },
+    { "date": "März 2016", "title": "ISAQB Advanced Level – Architecture Documentation" },
+    { "date": "Dezember 2012", "title": "ISAQB Certified Professional for Software Architecture – Foundation Level" }
+  ],
+  "workPhilosophy": [
+    "Bevorzuge langfristige Zusammenarbeit statt einmaliger Kurzprojekte.",
+    "Erfahren in Remote- und verteilten Teams.",
+    "Gewohnt an die Zusammenarbeit mit deutschen Behörden und Unternehmen.",
+    "Starker Fokus auf Softwarearchitektur, Code-Qualität und Wartbarkeit.",
+    "Erfahrung in der Migration von Legacy-Systemen zu modernen Architekturen."
+  ]
+}

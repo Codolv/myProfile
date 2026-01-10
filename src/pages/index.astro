@@ -1,16 +1,17 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { personalData } from '../data/personalData.js';
 
-const title = 'Freiberuflicher Java-Backend-Entwickler in Deutschland – Waldemar Artes';
+const title = `Freiberuflicher Java-Backend-Entwickler in Deutschland – ${personalData.personalInfo.name}`;
 const description =
-  'Ich baue skalierbare Backend-Services mit Java, Spring Boot und soliden Architekturmustern. Schau dir meinen Projektverlauf, Referenzen und meine Skills an.';
+  `Ich baue skalierbare Backend-Services mit Java, Spring Boot und soliden Architekturmustern. Schau dir meinen Projektverlauf, Referenzen und meine Skills an.`;
 ---
 
 <BaseLayout {title} {description}>
   <section class="grid gap-10 md:grid-cols-[minmax(0,2fr)_minmax(0,1.3fr)] md:items-center">
     <div class="space-y-6">
       <p class="inline-flex items-center rounded-full border border-amber-500/40 bg-amber-500/10 px-3 py-1 text-xs font-medium text-amber-200">
-        Verfügbar für Java/Spring-Backend-Projekte in Deutschland & remote in der EU
+        {personalData.personalInfo.availability}
       </p>
       <div>
         <h1 class="text-balance text-3xl font-semibold tracking-tight text-[#faf9f6] sm:text-4xl md:text-5xl">
@@ -36,12 +37,18 @@ const description =
         >
           Über mich & Skills
         </a>
+        <a
+          href="/cv.pdf"
+          class="rounded-full border border-amber-500/60 px-4 py-2 font-medium text-amber-100 shadow-sm shadow-amber-500/30 transition hover:bg-amber-500 hover:text-[#0a0a0a]"
+        >
+          Lebenslauf
+        </a>
       </div>
 
       <dl class="grid gap-4 text-xs text-amber-50/90 sm:grid-cols-3 sm:text-sm">
         <div>
           <dt class="font-medium text-amber-50">Standort</dt>
-          <dd>Deutschland · Remote-freundlich</dd>
+          <dd>{personalData.personalInfo.location}</dd>
         </div>
         <div>
           <dt class="font-medium text-amber-50">Fokus</dt>
@@ -59,7 +66,7 @@ const description =
         
         <img
           src="/profile.jpg"
-          alt="Portrait von Waldemar Artes"
+          alt={`Portrait von ${personalData.personalInfo.name}`}
           loading="lazy"
           class="h-full w-full object-cover transition-opacity duration-300"
           onerror="this.style.opacity=0"
@@ -83,4 +90,3 @@ const description =
     </aside>
   </section>
 </BaseLayout>
-
