@@ -8,8 +8,7 @@
     "preview": "astro preview",
     "lint": "echo \"No linter configured\"",
     "check": "astro check",
-    "generate:cv": "node scripts/generate-cv.mjs",
-    "prebuild": "node scripts/generate-cv.mjs"
+    "generate:cv": "node scripts/generate-cv.mjs"
   },
   "keywords": [
     "astro",
