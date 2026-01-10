@@ -80,15 +80,14 @@ export const personalData: PersonalData = {
       "Domain Driven Design (DDD)",
       "Microservices-Architektur",
       "Reactive Programming",
-      "Continuous Integration / Continuous Delivery",
-      "XÖV / OSCI-Standards"
+      "Continuous Integration / Continuous Delivery"
     ]
   },
   experience: [
     {
       company: "Bildungsportal IT.NRW",
       position: "Senior-Entwickler",
-      period: "05/2025 – jetzt",
+      period: "06/2025 – jetzt",
       description: "Betreuung der Anwendungen des Bildungsportals. Migration auf Tomcat 10 & Java 17, Behebung von Pentest-Schwachstellen, allgemeine Fehlerkorrekturen.",
       technologies: ["Java 17", "Spring", "Spring Boot", "Tomcat 7/10", "Maven", "GitLab", "Weld", "JSP", "JSF", "Primefaces", "Omnifaces"]
     },
